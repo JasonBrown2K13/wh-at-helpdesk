@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="wh_at_Helpdesk__for_Windows_10_.changeaddress"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:wh_at_Helpdesk__for_Windows_10_"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--Page transitions, copy into new page-->
+    <Page.Transitions>
+        <TransitionCollection>
+            <EntranceThemeTransition/>
+        </TransitionCollection>
+    </Page.Transitions>
+
+    <!--App bar-->
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton x:Name="changeAddressButton" Icon="Accept" Label="Confirm" Click="changeAddressButton_Click"/>
+            <AppBarButton x:Name="backButton" Icon="Back" Label="Back" Click="backButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <!--Grid containing app title and page name, copy into new page!-->
+        <Grid x:Name="titleGrid" HorizontalAlignment="Left" Height="105" Margin="10,10,0,0" VerticalAlignment="Top" Width="340">
+            <TextBlock x:Name="appTitle" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="WH-AT HELPDESK" VerticalAlignment="Top"/>
+            <TextBlock x:Name="pageTitle" HorizontalAlignment="Left" Margin="0,35,0,0" TextWrapping="Wrap" Text="set sign in address" VerticalAlignment="Top" FontSize="40"/>
+        </Grid>
+
+        <ScrollViewer>
+            <Grid>
+                <TextBlock x:Name="textOne" HorizontalAlignment="Left" Margin="10,110,0,0" TextWrapping="Wrap" Text="To set or change the automatic sign in address, please type the wh-at.net e-mail address you wish to sign in to the Helpdesk app with in the box below." VerticalAlignment="Top" Width="340"/>
+                <TextBlock x:Name="textTwo" HorizontalAlignment="Left" Margin="10,214,0,0" TextWrapping="Wrap" Text="When you have finished typing the address please click or tap the tick at the bottom of the page to set the new sign in address. " VerticalAlignment="Top"/>
+                <TextBox x:Name="emailBox" HorizontalAlignment="Left" Margin="10,307,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" PlaceholderText="wh-at.net e-mail address"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>
+

@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="wh_at_Helpdesk__for_Windows_10_.doge"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:wh_at_Helpdesk__for_Windows_10_"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--Page transitions, copy into new page-->
+    <Page.Transitions>
+        <TransitionCollection>
+            <EntranceThemeTransition/>
+        </TransitionCollection>
+    </Page.Transitions>
+
+    <!--App bar-->
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton x:Name="backButton" Icon="Back" Label="Back" Click="backButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <!--Grid containing app title and page name, copy into new page!-->
+        <Grid x:Name="titleGrid" HorizontalAlignment="Left" Height="105" Margin="10,10,0,0" VerticalAlignment="Top" Width="340">
+            <TextBlock x:Name="appTitle" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="SUCH HELPDESK MANY WH-AT" VerticalAlignment="Top" FontFamily="Comic Sans MS"/>
+            <TextBlock x:Name="pageTitle" HorizontalAlignment="Left" Margin="0,35,0,0" TextWrapping="Wrap" Text="much doge! wow!" VerticalAlignment="Top" FontSize="40" FontFamily="Comic Sans MS" Foreground="Yellow"/>
+        </Grid>
+
+        <!--Grid and scrollviewer containing the doge goodness. Such grid. Much doge. So amaze. Wow-->
+        <ScrollViewer>
+            <Grid>
+                <TextBlock x:Name="dogeText" HorizontalAlignment="Left" Margin="10,109,0,0" TextWrapping="Wrap" Text="such wow, much amaze! so easter egg!" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="18" Foreground="red"/>
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="18,241,0,0" TextWrapping="Wrap" Text="very help" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="Purple" FontSize="28"/>
+                <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="178,232,0,0" TextWrapping="Wrap" Text="much windows" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="Coral" FontSize="22"/>
+                <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="178,365,0,0" TextWrapping="Wrap" Text="such phone" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="Turquoise" FontSize="34"/>
+                <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="40,189,0,0" TextWrapping="Wrap" Text="such 2016!" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="White" FontSize="34" Width="174"/>
+                <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="228,412,0,0" TextWrapping="Wrap" Text="many fix" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="Orange" FontSize="22"/>
+                <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="54,418,0,0" TextWrapping="Wrap" Text="so improve" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="Yellow" FontSize="30"/>
+                <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Margin="33,386,0,0" TextWrapping="Wrap" Text="much mobile" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="red" FontSize="24"/>
+                <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" Margin="23,145,0,0" TextWrapping="Wrap" Text="many problem" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="Turquoise" FontSize="28"/>
+                <TextBlock x:Name="textBlock_Copy7" HorizontalAlignment="Left" Margin="54,264,0,0" TextWrapping="Wrap" Text="WOW!" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="yellow" FontSize="68"/>
+                <TextBlock x:Name="textBlock_Copy8" HorizontalAlignment="Left" Margin="10,333,0,0" TextWrapping="Wrap" Text="such wh-at" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="Red" FontSize="38"/>
+                <TextBlock x:Name="textBlock_Copy9" HorizontalAlignment="Left" Margin="228,156,0,0" TextWrapping="Wrap" Text="so helpdesk" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="Violet" FontSize="18"/>
+                <TextBlock x:Name="textBlock_Copy10" HorizontalAlignment="Left" Margin="228,319,0,0" TextWrapping="Wrap" Text="many question" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="Coral" FontSize="18"/>
+                <TextBlock x:Name="textBlock_Copy11" HorizontalAlignment="Left" Margin="10,451,0,0" TextWrapping="Wrap" Text="very microsoft" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="LimeGreen" FontSize="23"/>
+                <TextBlock x:Name="textBlock_Copy12" HorizontalAlignment="Left" Margin="186,465,0,0" TextWrapping="Wrap" Text="so computer" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="white" FontSize="28"/>
+                <TextBlock x:Name="textBlock_Copy13" HorizontalAlignment="Left" Margin="40,496,0,0" TextWrapping="Wrap" Text="much future" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="LawnGreen" FontSize="28"/>
+                <TextBlock x:Name="textBlock_Copy14" HorizontalAlignment="Left" Margin="145,535,0,0" TextWrapping="Wrap" Text="many solution" VerticalAlignment="Top" FontFamily="Comic Sans MS" Foreground="Turquoise" FontSize="32"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

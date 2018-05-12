@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="wh_at_Helpdesk__for_Windows_10_.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:wh_at_Helpdesk__for_Windows_10_"
+    RequestedTheme="Dark">
+
+</Application>

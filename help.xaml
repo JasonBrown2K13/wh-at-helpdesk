@@ -1,0 +1,106 @@
+﻿<Page
+    x:Class="wh_at_Helpdesk__for_Windows_10_.help"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:wh_at_Helpdesk__for_Windows_10_"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--Page transitions, copy into new page-->
+    <Page.Transitions>
+        <TransitionCollection>
+            <EntranceThemeTransition/>
+        </TransitionCollection>
+    </Page.Transitions>
+
+    <!--App bar-->
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton x:Name="backButton" Icon="Back" Label="Back" Click="backButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <!--Pivot-->
+        <Pivot Title="WH-AT HELPDESK">
+            <PivotItem Header="help">
+                <ScrollViewer>
+                    <Grid>
+                        <TextBlock x:Name="introductionText" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="introduction" VerticalAlignment="Top" FontSize="35" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                        <TextBlock x:Name="helpText" HorizontalAlignment="Left" Margin="10,47,0,0" TextWrapping="Wrap" Text="The wh-at Helpdesk (for Windows 10) works on all Windows 10 devices such as desktop computers, laptops, tablets, phones and even your Xbox One!" VerticalAlignment="Top" Width="316"/>
+
+                        <TextBlock x:Name="sendATicketText" HorizontalAlignment="Left" Margin="10,129,0,0" TextWrapping="Wrap" Text="send a ticket" VerticalAlignment="Top" FontSize="35" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                        <TextBlock x:Name="help2Text" HorizontalAlignment="Left" Margin="10,176,0,0" TextWrapping="Wrap" Text="The helpdesk can be used to report problems with IT in the school. It can also be used to request assistance, for example help with an assembly. Simply complete a ticket and press the tick at the bottom of the app to send it. You do not need to select a room or a priority, but you must choose a problem and write a short description. The description must be 200 characters or less. If you go over 200 characters you will need to delete some characters before you can continue typing. The app shows you how many characters you have reamining." VerticalAlignment="Top" Width="316"/>
+                        <TextBlock x:Name="help3Text" HorizontalAlignment="Left" Margin="10,434,0,-129" TextWrapping="Wrap" Text="To send the ticket to the helpdesk, once you have completed the ticket, simply press the tick button at the bottom of the app. The app will launch your default email client to send your ticket to the helpdesk. The email subject and body will contain all of the information about your ticket. Any attachments you have sent with your ticket will be attached to the email. Simply send this email message to send your ticket. You should not modify the email. Technicians will respond to the email the ticket has been sent from." VerticalAlignment="Top" Width="316"/>
+
+                        <TextBlock x:Name="attachmentsText" HorizontalAlignment="Left" Margin="10,676,0,0" TextWrapping="Wrap" Text="attachments" VerticalAlignment="Top" FontSize="35" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                        <TextBlock x:Name="help4Text" HorizontalAlignment="Left" Margin="10,723,0,-129" TextWrapping="Wrap" Text="Sometimes showing a photograph or a video of the problem can say a thousand words. By pressing the camera button at the bottom of the app, you can choose to take a photograph or a video using the device's camera. On a PC this will be a webcam, on a phone or a tablet you can use the rear or forward-facing camera on the device." VerticalAlignment="Top" Width="316"/>
+                        <TextBlock x:Name="help5Text" HorizontalAlignment="Left" Margin="10,900,0,-129" TextWrapping="Wrap" Text="Once you have taken a photograph or a video you can attach it to the ticket by pressing the paper clip button at the bottom of the app and selecting the file. When you send the ticket, the photograph or video will be attached." VerticalAlignment="Top" Width="316"/>
+                        <TextBlock x:Name="help6Text" HorizontalAlignment="Left" Margin="10,1020,0,-129" TextWrapping="Wrap" Text="Please note that currently only JPEG, PNG and MP4 files can be attached and the maximum length for a video is 30 seconds." VerticalAlignment="Top" Width="316"/>
+
+                        <TextBlock x:Name="historyText" HorizontalAlignment="Left" Margin="10,1090,0,0" TextWrapping="Wrap" Text="history" VerticalAlignment="Top" FontSize="35" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                        <TextBlock x:Name="help7Text" HorizontalAlignment="Left" Margin="10,1140,0,-129" TextWrapping="Wrap" Text="Tickets submitted on this device can be viewed by swiping to the left on the helpdesk page, or by tapping on 'my tickets' at the top of the helpdesk page. The saved tickets can be removed by pressing the remove tickets button on the options page of the app." VerticalAlignment="Top" Width="316"/>
+
+                        <TextBlock x:Name="optionsText" HorizontalAlignment="Left" Margin="10,1270,0,0" TextWrapping="Wrap" Text="options" VerticalAlignment="Top" FontSize="35" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                        <TextBlock x:Name="help8Text" HorizontalAlignment="Left" Margin="10,1320,0,-129" TextWrapping="Wrap" Text="The helpdesk has several options, all of which are accessible from the options page on the help page. The helpdesk can sign you in automatically, this address can be set or removed from the options page and all saved tickets can be removed from the options page." VerticalAlignment="Top" Width="316"/>
+
+                        <TextBlock x:Name="moreText" HorizontalAlignment="Left" Margin="10,1450,0,0" TextWrapping="Wrap" Text="more..." VerticalAlignment="Top" FontSize="35" Foreground="{ThemeResource SystemControlForegroundAccentBrush}"/>
+                        <TextBlock x:Name="help9Text" HorizontalAlignment="Left" Margin="10,1500,0,-129" TextWrapping="Wrap" Text="For further support please view the user manual or instructional video. Please note that these are downloaded from the internet. Your device will need to be online to view this content and data charges may apply." VerticalAlignment="Top" Width="316"/>
+
+                        <Button x:Name="downloadGuide" Content="read the user guide" HorizontalAlignment="Left" Margin="10,1610,0,0" VerticalAlignment="Top" Click="downloadGuide_Click"/>
+                        <Button x:Name="downloadVideo" Content="watch the video" HorizontalAlignment="Left" Margin="180,1610,0,0" VerticalAlignment="Top" Click="downloadVideo_Click"/>
+                    </Grid>
+                </ScrollViewer>
+            </PivotItem>
+
+            <!--Options pivot-->
+            <PivotItem Header="options">
+                <ScrollViewer>
+                    <Grid>
+                        <TextBlock x:Name="deleteSignInText" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="Remove sign in address" VerticalAlignment="Top"/>
+                        <Button x:Name="deleteSignIn" Content="remove sign in address" HorizontalAlignment="Left" Margin="0,35,0,0" VerticalAlignment="Top" Click="deleteSignIn_Click"/>
+                        <TextBlock x:Name="changeSignInText" HorizontalAlignment="Left" Margin="0,100,0,0" TextWrapping="Wrap" Text="Set or change sign in address" VerticalAlignment="Top"/>
+                        <Button x:Name="changeSignIn" Content="change sign in address" HorizontalAlignment="Left" Margin="0,125,0,0" VerticalAlignment="Top" Click="changeSignIn_Click" Width="173"/>
+                        <TextBlock x:Name="deleteTicketsText" HorizontalAlignment="Left" Margin="0,190,0,0" TextWrapping="Wrap" Text="Remove all saved tickets on this device" VerticalAlignment="Top"/>
+                        <Button x:Name="deleteTicketsButton" Content="remove tickets" HorizontalAlignment="Left" Margin="0,215,0,0" VerticalAlignment="Top" Width="173" Click="deleteTicketsButton_Click"/>
+                    </Grid>
+                </ScrollViewer>
+            </PivotItem>
+            
+            <!--Recommended apps pivot-->
+            <PivotItem Header="recommended">
+                <ScrollViewer>
+                    <Grid>
+                        <TextBlock x:Name="enhanceText" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="Enhance your experience by downloading these recommended apps." VerticalAlignment="Top" Width="310"/>
+
+                        <TextBlock x:Name="yammerText" HorizontalAlignment="Left" Margin="1,70,0,0" TextWrapping="Wrap" Text="Download the Yammer Windows Phone app, the school social network you can use to connect with students and colleagues." VerticalAlignment="Top" Width="309"/>
+                        <Button x:Name="yammerButton" Content="download yammer" HorizontalAlignment="Left" Margin="0,135,0,0" VerticalAlignment="Top" Click="downloadYammer_Click"/>
+                       
+                        <TextBlock x:Name="skypeText" HorizontalAlignment="Left" Margin="0,190,0,0" TextWrapping="Wrap" Text="Download the Skype for Business Windows Phone app, the business tool for communicating with colleagues within school. " VerticalAlignment="Top" Width="310"/>
+                        <Button x:Name="skypeButton" Content="download skype" HorizontalAlignment="Left" Margin="1,257,0,0" VerticalAlignment="Top" Click="downloadSkype_Click" Width="143"/>
+                        
+                        <TextBlock x:Name="onenoteText" HorizontalAlignment="Left" Margin="0,312,0,0" TextWrapping="Wrap" Text="Download the OneNote Windows app, the location for all of your notes and work!" VerticalAlignment="Top" Width="310"/>
+                        <Button x:Name="onenoteButton" Content="download onenote" HorizontalAlignment="Left" Margin="1,357,0,0" VerticalAlignment="Top" Width="143" Click="onenoteButton_Click"/>
+                    </Grid>
+                </ScrollViewer>
+            </PivotItem>   
+
+            <!--About pivot-->
+            <PivotItem Header="about">
+                <Grid>
+                    <TextBlock x:Name="appNameText" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="wh-at helpdesk (for Windows 10)" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="buildNoText" HorizontalAlignment="Left" Margin="0,35,0,0" TextWrapping="Wrap" Text="Build 130.02 Rev 2.0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="versionNumberText" HorizontalAlignment="Left" Margin="0,60,0,0" TextWrapping="Wrap" Text="Version 2016" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="buildTagText" HorizontalAlignment="Left" Margin="0,85,0,0" TextWrapping="Wrap" Text="2016.0130.02.02.W10.20160224" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="buildDateText" HorizontalAlignment="Left" Margin="0,110,0,0" TextWrapping="Wrap" Text="Build Date: February 24 2016" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="osText" HorizontalAlignment="Left" Margin="0,135,0,0" TextWrapping="Wrap" Text="for Windows 10 Build 10586" VerticalAlignment="Top" Tapped="osText_Tapped"/>
+                </Grid>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>

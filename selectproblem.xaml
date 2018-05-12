@@ -1,0 +1,98 @@
+﻿<Page
+    x:Class="wh_at_Helpdesk__for_Windows_10_.selectproblem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:wh_at_Helpdesk__for_Windows_10_"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!--Page transitions, copy into new page-->
+    <Page.Transitions>
+        <TransitionCollection>
+            <EntranceThemeTransition/>
+        </TransitionCollection>
+    </Page.Transitions>
+
+    <!--App bar-->
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton x:Name="backButton" Icon="Back" Label="Back" Click="backButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+    
+    <Page.Resources>
+        <CollectionViewSource x:Key="ProblemGroups"
+                              IsSourceGrouped="True"/>
+
+        <JumpListItemBackgroundConverter x:Key="BackgroundConverter"/>
+        <JumpListItemForegroundConverter x:Key="ForegroundConverter"/>
+        <DataTemplate x:Key="AddrBookJumpTemplate">
+            <Border Padding="5">
+                <Border Background="{Binding Converter={StaticResource BackgroundConverter}}" 
+                        Width="52" Height="52" HorizontalAlignment="Left">
+                    <TextBlock Text="{Binding Group.Key}" 
+                               Foreground="{Binding Converter={StaticResource ForegroundConverter}}" 
+                               FontSize="42" Padding="6" 
+                               HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Border>
+            </Border>
+        </DataTemplate>
+        <DataTemplate x:Key="AddrBookItemTemplate">
+            <StackPanel VerticalAlignment="Top">
+                <TextBlock FontWeight="Bold"  Text="{Binding ProblemName}" />
+                <TextBlock Text="{Binding Block}" />
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="AddrBookGroupHeaderTemplate">
+            <Border Background="Transparent" Padding="5">
+                <Border Background="{ThemeResource SystemControlForegroundAccentBrush}" BorderBrush="{ThemeResource SystemControlForegroundAccentBrush}" BorderThickness="2" Width="62" 
+                        Height="62" Margin="0,0,18,0" HorizontalAlignment="Left">
+                    <TextBlock Text="{Binding Key}" Foreground="{ThemeResource SystemControlForegroundBaseMediumHighBrush}" FontSize="48" Padding="6" 
+                               FontFamily="{ThemeResource PhoneFontFamilySemiLight}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Border>
+            </Border>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Grid containing app title and page name, copy into new page!-->
+        <Grid Background="Black" x:Name="titleGrid" HorizontalAlignment="Left" Height="105" Margin="10,10,0,0" VerticalAlignment="Top" Width="340">
+            <TextBlock x:Name="appTitle" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="WH-AT HELPDESK" VerticalAlignment="Top"/>
+            <TextBlock x:Name="pageTitle" HorizontalAlignment="Left" Margin="0,35,0,0" TextWrapping="Wrap" Text="select problem" VerticalAlignment="Top" FontSize="40"/>
+        </Grid>
+
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="0,0,0,50">
+            <SemanticZoom>
+                <SemanticZoom.ZoomedInView>
+                    <ListView SelectedIndex="-1" x:Name="ProblemListView" IsHoldingEnabled="True" Tapped="ProblemListView_Tapped"
+                        ItemsSource="{Binding Source={StaticResource ProblemGroups}}"
+                        ItemTemplate="{StaticResource AddrBookItemTemplate}"
+                        ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                    <ListView.GroupStyle>
+                            <GroupStyle HidesIfEmpty="True" HeaderTemplate="{StaticResource AddrBookGroupHeaderTemplate}"/>
+                        </ListView.GroupStyle>
+                    </ListView>
+                </SemanticZoom.ZoomedInView>
+                <SemanticZoom.ZoomedOutView>
+                    <GridView Background="Black" 
+                          ItemsSource="{Binding Source={StaticResource ProblemGroups}, Path=CollectionGroups}"
+                          ItemTemplate="{StaticResource AddrBookJumpTemplate}">
+                    </GridView>
+                </SemanticZoom.ZoomedOutView>
+            </SemanticZoom>
+            <AutoSuggestBox HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="340" PlaceholderText="search for a Problem"
+                            ItemsSource="{Binding Source={StaticResource ProblemGroups}}"
+                            ItemTemplate="{StaticResource AddrBookItemTemplate}"
+                            QueryIcon="Find"/>
+        </Grid>
+    </Grid>
+</Page>
